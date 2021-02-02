@@ -1,15 +1,42 @@
 {
+  "name": "gatsby-starter-default-i18n",
+  "description": "Gatsby default starter",
+  "version": "1.0.0",
+  "author": "angeloocana.com",
+  "dependencies": {
+    "gatsby": "^2.0.102",
+    "gatsby-link": "^2.0.9",
+    "gatsby-plugin-i18n": "^1.0.1",
+    "gatsby-plugin-react-helmet": "^3.0.5",
+    "intl": "^1.2.5",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-helmet": "^5.2.0",
+    "react-intl": "^2.8.0",
+    "react-router-dom": "^4.3.1"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "main": "n/a",
   "scripts": {
-    "postinstall": "lerna bootstrap",
-    "test": "lerna run test && codecov"
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
+    "test": "jest",
+    "coverage": "codecov"
   },
   "devDependencies": {
     "codecov": "^3.0.0",
-    "lerna": "^3.22.1"
+    "jest": "^24.0.0",
+    "prettier": "^1.16.1"
   },
-  "keywords": [
-    "gatsby",
-    "gatsby-plugin"
-  ],
-  "license": "MIT"
+  "jest": {
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/.cache/"
+    ]
+  }
 }
