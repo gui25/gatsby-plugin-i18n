@@ -1,35 +1,51 @@
-import React from 'react'
-import Link from 'gatsby-link'
-import SelectLanguage from './SelectLanguage';
+import { Link } from "gatsby"
+import PropTypes from "prop-types"
+import React from "react"
 
-const Header = (props) => (
-  <div
+const Header = ({ siteTitle }) => (
+  <header
     style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
+      background: `rebeccapurple`,
+      marginBottom: `1.45rem`,
     }}
   >
     <div
       style={{
-        margin: '0 auto',
+        margin: `0 auto`,
         maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
+        padding: `1.45rem 1.0875rem`,
       }}
     >
       <h1 style={{ margin: 0 }}>
         <Link
           to="/"
           style={{
-            color: 'white',
-            textDecoration: 'none',
+            color: `white`,
+            textDecoration: `none`,
           }}
         >
-          Gatsby
+          {siteTitle}
         </Link>
       </h1>
-      <SelectLanguage langs={props.langs} />
+      <p style={{ color: "white" }}>
+        This site is partially translated!{" "}
+        <Link to="/en/" style={{ color: "inherit" }}>
+          English
+        </Link>{" "}
+        <Link to="/es/" style={{ color: "inherit" }}>
+          Spanish
+        </Link>
+      </p>
     </div>
-  </div>
+  </header>
 )
 
-export default Header;
+Header.propTypes = {
+  siteTitle: PropTypes.string,
+}
+
+Header.defaultProps = {
+  siteTitle: ``,
+}
+
+export default Header

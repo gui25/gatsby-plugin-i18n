@@ -2,16 +2,16 @@ import React from "react"
 import { Trans } from "@lingui/macro"
 import { I18nProvider } from "@lingui/react"
 
-import catalogEN from "../locales/en/messages"
+import catalogES from "../locales/es/messages"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const IndexPage = () => (
   <I18nProvider
-    language="en"
+    language="es"
     catalogs={{
-      en: catalogEN,
+      es: catalogES,
     }}
   >
     <Layout>
